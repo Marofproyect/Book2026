@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marof Jaidar — BOOK 2026 | Portafolio </title>
+<meta name="description" content="Portafolio director de Arte 2026. Identidad visual, branding y dirección de arte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --magenta:#FF3F8E;
+  --orange:#FF7A00;
+  --yellow:#F9D949;
+  --purple:#5B2C83;
+  --black:#0E0E0E;
+  --gray:#141414;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:#e6e6e6;
+  font-family:'Outfit',system-ui,-apple-system,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.progress{
+  position:fixed;top:0;left:0;height:3px;width:0;
+  background:linear-gradient(90deg,var(--magenta),var(--orange),var(--yellow),var(--purple));
+  z-index:9999;box-shadow:0 0 10px rgba(255,63,142,.4);
+}
+/* HERO */
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  position:relative;padding:80px 24px;isolation:isolate;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(900px 600px at 75% 20%,rgba(91,44,131,.55),transparent 65%),
+    radial-gradient(800px 500px at 15% 80%,rgba(255,122,0,.28),transparent 60%),
+    radial-gradient(600px 400px at 50% 50%,rgba(139,69,19,.2),transparent 70%),
+    linear-gradient(180deg,#2a1433 0%,#1f0f1a 28%,#1a0e12 55%,#0E0E0E 100%);
+}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.folio-wrap{position:relative;text-align:center}
+.folio{
+  font-size:clamp(115px,29vw,390px);line-height:.75;margin:0;
+  background:linear-gradient(180deg,#fff 0%,#fff 58%,rgba(255,255,255,.85)72%,rgba(255,255,255,0)92%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  -webkit-mask-image:linear-gradient(to bottom,black 60%,transparent 94%);
+  filter:drop-shadow(0 20px 60px rgba(0,0,0,.55));
+  letter-spacing:-.03em;
+}
+.folio-25{
+  position:absolute;right:-2%;bottom:-18%;
+  font-family:'Space Grotesk';font-weight:700;
+  font-size:clamp(55px,12vw,155px);color:var(--yellow);line-height:1;
+  text-shadow:4px 4px 0 var(--magenta),8px 8px 0 var(--orange),12px 12px 0 var(--purple),0 0 28px rgba(249,217,73,.25);
+  transform:rotate(-3deg);
+}
+.hero-meta{
+  position:absolute;bottom:32px;left:0;right:0;
+  display:flex;justify-content:space-between;gap:16px;
+  padding:0 32px;font-size:13px;color:#b8b0b8;letter-spacing:.08em;text-transform:uppercase;
+}
+.hero-meta div:nth-child(2){color:#d8d0d6}
+@media(max-width:720px){
+  .hero-meta{flex-direction:column;align-items:center;bottom:24px;gap:4px}
+  .folio-25{right:4%;bottom:-12%}
+}
+/* INTRO */
+.intro{padding:90px 0 60px;border-top:1px solid #1c1c1c;background:linear-gradient(180deg,rgba(14,14,14,0),rgba(20,20,20,.4))}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:18px;padding:6px 12px;border:1px solid rgba(249,217,73,.25);border-radius:20px;background:rgba(249,217,73,.06)}
+.intro h2{font-size:clamp(32px,5vw,56px);line-height:1.1;margin-bottom:22px}
+.intro h2 span{background:linear-gradient(90deg,var(--magenta),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.intro p{max-width:780px;color:#c9c5c9;font-size:18px}
+.intro .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.intro .tags span{font-size:12px;padding:7px 12px;background:#151515;border:1px solid #232323;border-radius:20px;color:#b9b9b9}
+/* PROJECTS */
+.project{padding:88px 0;border-top:1px solid #1a1a1a;position:relative}
+.project-grid{display:grid;grid-template-columns:350px 1fr;gap:64px;align-items:start}
+.project-info{position:sticky;top:96px;padding-left:24px;border-left:3px solid var(--accent)}
+.project-number{
+  font-size:72px;font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.16);
+  font-family:'Space Grotesk';margin-bottom:6px;display:block;
+}
+.project-info h2{font-size:40px;margin:0 0 6px;letter-spacing:-.01em}
+.project-tag{color:var(--accent);text-transform:uppercase;font-size:12px;letter-spacing:.12em;font-weight:600;margin-bottom:16px}
+.project-info>p{color:#b6b2b6;font-size:15px}
+.project-details{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.project-details li{font-size:11px;padding:6px 10px;background:#131313;border:1px solid #232323;border-radius:16px;color:#a8a8a8;letter-spacing:.04em}
+.project-work{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.work-hero,.work-thumb{
+  background:#111;border:1px solid #1e1e1e;border-radius:14px;overflow:hidden;position:relative;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s;
+}
+.work-hero{grid-column:span 3;aspect-ratio:16/6}
+.work-thumb{aspect-ratio:4/5}
+.work-hero:hover,.work-thumb:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 30px rgba(0,0,0,.45),0 0 0 1px color-mix(in srgb,var(--accent) 30%,transparent)}
+@media(max-width:1024px){
+  .project-grid{grid-template-columns:1fr;gap:36px}
+  .project-info{position:relative;top:0}
+  .project-work{grid-template-columns:repeat(2,1fr)}
+  .work-hero{grid-column:span 2}
+}
+@media(max-width:560px){
+  .project{padding:64px 0}
+  .project-work{gap:12px}
+  .work-hero,.work-thumb{border-radius:10px}
+}
+/* ESTILO SECTION */
+.estilo-section{padding:100px 0;background:#0a0a0a;border-top:1px solid #1e1e1e;border-bottom:1px solid #1e1e1e;position:relative}
+.estilo-section::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 400px at 20% 0%,rgba(255,63,142,.08),transparent 60%)}
+.estilo-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.estilo-number{font-size:120px;line-height:.8;font-weight:700;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);font-family:'Space Grotesk';margin-bottom:8px}
+.estilo-header span{font-size:12px;letter-spacing:.22em;color:var(--yellow);text-transform:uppercase;display:block;margin-bottom:8px}
+.estilo-header h2{font-size:clamp(48px,7vw,86px);line-height:.9;margin:0}
+.estilo-desc{color:#b9b5b9;max-width:440px;margin:26px 0 34px;font-size:16px}
+.swatches{display:flex;gap:18px;flex-wrap:wrap}
+.swatch{text-align:center}
+.swatch>div{width:58px;height:58px;border-radius:50%;border:2px solid #222;box-shadow:0 6px 18px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.06);margin-bottom:8px;transition:transform .3s}
+.swatch:hover>div{transform:translateY(-3px)}
+.swatch span{font-size:11px;color:#8a8a8a;font-family:'Space Grotesk';letter-spacing:.02em}
+.typo-card{background:linear-gradient(160deg,#151515,#0e0e0e);border:1px solid #222;border-radius:22px;padding:38px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.typo-card::before{content:'';position:absolute;inset:0;background:radial-gradient(420px 220px at 85% -10%,rgba(255,63,142,.18),transparent 60%),radial-gradient(300px 180px at 10% 110%,rgba(255,122,0,.12),transparent 60%)}
+.typo-card>span{position:relative;font-size:12px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;font-weight:600}
+.typo-main{position:relative;font-family:'Space Grotesk';font-size:clamp(28px,3.4vw,40px);font-weight:700;margin:14px 0 26px;line-height:1.12}
+.typo-main em{font-style:normal;color:var(--yellow);margin:0 6px}
+.typo-samples{position:relative;display:grid;gap:12px}
+.sample{padding:14px 16px;background:#0c0c0c;border:1px solid #1f1f1f;border-radius:12px;display:flex;justify-content:space-between;align-items:center;transition:border-color .3s}
+.sample:hover{border-color:#2a2a2a}
+.sample .label{font-size:10px;color:#7a7a7a;text-transform:uppercase;letter-spacing:.1em}
+.sample.space{font-family:'Space Grotesk';font-weight:600;font-size:18px}
+.sample.outfit{font-family:'Outfit';font-weight:400;font-size:17px}
+@media(max-width:980px){
+  .estilo-grid{grid-template-columns:1fr;gap:48px}
+  .estilo-number{font-size:90px}
+}
+/* CONTACT */
+.contact{padding:100px 24px;text-align:center;background:linear-gradient(180deg,#0E0E0E 0%,#141014 100%)}
+.contact h3{font-size:clamp(30px,4.5vw,48px);margin-bottom:14px}
+.contact p{color:#b8b4b8;max-width:620px;margin:0 auto 32px;font-size:17px}
+.contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.contact-links a{padding:12px 20px;background:#161616;border:1px solid #262626;border-radius:12px;font-size:14px;font-weight:500;transition:all .3s;position:relative;overflow:hidden}
+.contact-links a:first-child{background:linear-gradient(90deg,var(--magenta),var(--orange));border:none;color:#0a0a0a;font-weight:600}
+.contact-links a:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.4);border-color:#333}
+.contact-links a:first-child:hover{box-shadow:0 10px 26px rgba(255,63,142,.3)}
+footer.bottom{padding:28px 24px;border-top:1px solid #1a1a1a;color:#6e6e6e;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer.bottom span strong{color:#9a9a9a;font-weight:500}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* CARRUSEL HERO - inyección */
+.carousel-wrap{margin-top:18px;position:relative}
+.carousel{position:relative;overflow:hidden;border-radius:14px}
+.c-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 2px 8px}
+.c-track::-webkit-scrollbar{display:none}
+.c-slide{flex:0 0 32%;scroll-snap-align:start;aspect-ratio:4/5;background:#0f0f0f;border:1px solid #1e1e1e;border-radius:14px;overflow:hidden;position:relative;transition:transform .35s,border-color .3s}
+.c-slide:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+.c-slide img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:1024px){.c-slide{flex-basis:45%}}
+@media(max-width:640px){.c-slide{flex-basis:78%;aspect-ratio:4/5}}
+.c-prev,.c-next{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(10,10,10,.7);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);color:#fff;font-size:22px;display:grid;place-items:center;cursor:pointer;z-index:3;transition:all .25s;opacity:.9}
+.c-prev{left:12px}.c-next{right:12px}
+.c-prev:hover,.c-next:hover{background:var(--accent);color:#0a0a0a;border-color:var(--accent);transform:translateY(-50%) scale(1.05);opacity:1}
+.c-dots{display:flex;gap:7px;justify-content:center;margin-top:14px}
+.c-dot{width:7px;height:7px;border-radius:50%;background:#2a2a2a;transition:all .3s;cursor:pointer;border:none;padding:0}
+.c-dot.active{width:22px;border-radius:4px;background:var(--accent)}
+
+</style>
+</head>
+<body>
+<div class="progress"></div>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="folio-wrap">
+    <h1 class="folio">Book</h1>
+    <span class="folio-25">26</span>
+  </div>
+  <div class="hero-meta">
+    <div></div>
+    <div>Dirección de Arte</div>
+    <div></div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container reveal">
+    <span class="eyebrow">Disponible para proyectos</span>
+    <h2>Diseño con propósito, <span>ejecución impecable.</span></h2>
+    <p>Soy Publicista especializado en identidad visual y branding. Este Book reúne 6 proyectos seleccionados que demuestran consistencia visual y adaptabilidad a distintos sectores. Busco integrarme a un equipo creativo como Diseñador / Director de Arte Semi-Señor. Disponible inmediata, remoto o híbrido.</p>
+    <div class="tags">
+      <span>Branding</span><span>Identidad Visual</span><span>Dirección de Arte</span><span>IA</span><span>Web</span>
+    </div>
+  </div>
+</section>
+
+<!-- 01 ACERPRO -->
+<section class="project" style="--accent:#FF3F8E">
+  <div class="container project-grid">
+    <div class="project-info reveal">
+      <span class="project-number">01</span>
+      <h2>ACERPRO</h2>
+      <p class="project-tag">Industrial / B2B</p>
+      <p>Rediseño integral para empresa metalmecánica con 20 años en el sector. Sistema robusto, tipografía condensada y paleta de alto contraste para aplicaciones en planta, digital y señalética.</p>
+      <ul class="project-details"><li>Branding</li><li>Manual</li><li>Señalética</li><li>Presentaciones</li></ul>
+    </div>
+        <div class="project-work reveal">
+      <!-- REEMPLAZA: acerpro-principal.jpg (1600x600) --> 
+      <div class="work-hero"><img src="acerpro-principal.jpg" alt="ACERPRO principal" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="carousel-wrap">
+        <div class="carousel">
+          <button class="c-prev" aria-label="Anterior">‹</button>
+          <div class="c-track">
+          <div class="c-slide"><img src="acerpro-01.jpg" alt="ACERPRO 1" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="acerpro-02.jpg" alt="ACERPRO 2" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="acerpro-03.jpg" alt="ACERPRO 3" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="acerpro-04.jpg" alt="ACERPRO 4" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="acerpro-05.jpg" alt="ACERPRO 5" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="acerpro-06.jpg" alt="ACERPRO 6" loading="lazy" style="object-fit:cover"></div>
+          </div>
+          <button class="c-next" aria-label="Siguiente">›</button>
+        </div>
+        <div class="c-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 AGRALIA -->
+<section class="project" style="--accent:#FF7A00">
+  <div class="container project-grid">
+    <div class="project-info reveal">
+      <span class="project-number">02</span>
+      <h2>AGRALIA</h2>
+      <p class="project-tag">Productos / Agroindustria</p>
+      <p>Branding para marca de insumos agrícolas premium. Concepto de crecimiento orgánico, trazabilidad y confianza. Sistema de packaging, etiquetas y comunicación en punto de venta.</p>
+      <ul class="project-details"><li>Packaging</li><li>Brand Strategy</li><li>Retail</li></ul>
+    </div>
+        <div class="project-work reveal">
+      <!-- REEMPLAZA: agralia-principal.jpg (1600x600) --> 
+      <div class="work-hero"><img src="agralia-principal.jpg" alt="AGRALIA principal" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="carousel-wrap">
+        <div class="carousel">
+          <button class="c-prev" aria-label="Anterior">‹</button>
+          <div class="c-track">
+          <div class="c-slide"><img src="agralia-01.jpg" alt="AGRALIA 1" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="agralia-02.jpg" alt="AGRALIA 2" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="agralia-03.jpg" alt="AGRALIA 3" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="agralia-04.jpg" alt="AGRALIA 4" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="agralia-05.jpg" alt="AGRALIA 5" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="agralia-06.jpg" alt="AGRALIA 6" loading="lazy" style="object-fit:cover"></div>
+          </div>
+          <button class="c-next" aria-label="Siguiente">›</button>
+        </div>
+        <div class="c-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 ALPHA4 -->
+<section class="project" style="--accent:#5B2C83">
+  <div class="container project-grid">
+    <div class="project-info reveal">
+      <span class="project-number">03</span>
+      <h2>ALPHA4</h2>
+      <p class="project-tag">Servicios / Seguridad</p>
+      <p>Identidad y sistema visual para startup de analítica. Dirección de arte digital con modo oscuro, componentes accesibles y lenguaje escalable para producto y marketing.</p>
+      <ul class="project-details"><li>Brand System</li><li>Product UI</li><li>Design System</li></ul>
+    </div>
+        <div class="project-work reveal">
+      <!-- REEMPLAZA: alpha4-principal.jpg (1600x600) --> 
+      <div class="work-hero"><img src="alpha4-principal.jpg" alt="ALPHA4 principal" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="carousel-wrap">
+        <div class="carousel">
+          <button class="c-prev" aria-label="Anterior">‹</button>
+          <div class="c-track">
+          <div class="c-slide"><img src="alpha4-01.jpg" alt="ALPHA4 1" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="alpha4-02.jpg" alt="ALPHA4 2" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="alpha4-03.jpg" alt="ALPHA4 3" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="alpha4-04.jpg" alt="ALPHA4 4" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="alpha4-05.jpg" alt="ALPHA4 5" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="alpha4-06.jpg" alt="ALPHA4 6" loading="lazy" style="object-fit:cover"></div>
+          </div>
+          <button class="c-next" aria-label="Siguiente">›</button>
+        </div>
+        <div class="c-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 CLASH -->
+<section class="project" style="--accent:#FF3F8E">
+  <div class="container project-grid">
+    <div class="project-info reveal">
+      <span class="project-number">04</span>
+      <h2>CLASH</h2>
+      <p class="project-tag">urban / Style</p>
+      <p>Es una cuestión de actitud. Un estilo definido apuntando sienpre a la cultura del hight.</p>
+      <ul class="project-details"><li>Esports</li><li>Motion</li><li>Merch</li></ul>
+    </div>
+        <div class="project-work reveal">
+      <!-- REEMPLAZA: clash-principal.jpg (1600x600) --> 
+      <div class="work-hero"><img src="clash-principal.jpg" alt="CLASH principal" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="carousel-wrap">
+        <div class="carousel">
+          <button class="c-prev" aria-label="Anterior">‹</button>
+          <div class="c-track">
+          <div class="c-slide"><img src="clash-01.jpg" alt="CLASH 1" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="clash-02.jpg" alt="CLASH 2" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="clash-03.jpg" alt="CLASH 3" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="clash-04.jpg" alt="CLASH 4" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="clash-05.jpg" alt="CLASH 5" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="clash-06.jpg" alt="CLASH 6" loading="lazy" style="object-fit:cover"></div>
+          </div>
+          <button class="c-next" aria-label="Siguiente">›</button>
+        </div>
+        <div class="c-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CORREA -->
+<section class="project" style="--accent:#F9D949">
+  <div class="container project-grid">
+    <div class="project-info reveal">
+      <span class="project-number">05</span>
+      <h2>CORREA</h2>
+      <p class="project-tag">Venta / Automotriz</p>
+      <p>Identidad minimalista, se desempeña en el rubro automotriz, con más de 20 años de experiencia.</p>
+      <ul class="project-details"><li>Personal Brand</li><li>Web</li><li>Social</li></ul>
+    </div>
+        <div class="project-work reveal">
+      <!-- REEMPLAZA: correa-principal.jpg (1600x600) --> 
+      <div class="work-hero"><img src="correa-principal.jpg" alt="CORREA principal" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="carousel-wrap">
+        <div class="carousel">
+          <button class="c-prev" aria-label="Anterior">‹</button>
+          <div class="c-track">
+          <div class="c-slide"><img src="correa-01.jpg" alt="CORREA 1" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="correa-02.jpg" alt="CORREA 2" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="correa-03.jpg" alt="CORREA 3" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="correa-04.jpg" alt="CORREA 4" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="correa-05.jpg" alt="CORREA 5" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="correa-06.jpg" alt="CORREA 6" loading="lazy" style="object-fit:cover"></div>
+          </div>
+          <button class="c-next" aria-label="Siguiente">›</button>
+        </div>
+        <div class="c-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 LA AMERICANA -->
+<section class="project" style="--accent:#FF7A00">
+  <div class="container project-grid">
+    <div class="project-info reveal">
+      <span class="project-number">06</span>
+      <h2>LA AMERICANA</h2>
+      <p class="project-tag">Moda / Retail</p>
+      <p>Tradición desde 1950 con visión y presencia vanguardista; en perfecto equilibro entre la esencia clásica y el estilo urbano.</p>
+      <ul class="project-details"><li>Restaurant</li><li>Packaging</li><li>Editorial</li></ul>
+    </div>
+        <div class="project-work reveal">
+      <!-- REEMPLAZA: laamericana-principal.jpg (1600x600) -->
+      <div class="work-hero"><img src="laamericana-principal.jpg" alt="LA AMERICANA principal" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="carousel-wrap">
+        <div class="carousel">
+          <button class="c-prev" aria-label="Anterior">‹</button>
+          <div class="c-track">
+          <div class="c-slide"><img src="laamericana-01.jpg" alt="LA AMERICANA 1" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="laamericana-02.jpg" alt="LA AMERICANA 2" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="laamericana-03.jpg" alt="LA AMERICANA 3" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="laamericana-04.jpg" alt="LA AMERICANA 4" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="laamericana-05.jpg" alt="LA AMERICANA 5" loading="lazy" style="object-fit:cover"></div>
+          <div class="c-slide"><img src="laamericana-06.jpg" alt="LA AMERICANA 6" loading="lazy" style="object-fit:cover"></div>
+          </div>
+          <button class="c-next" aria-label="Siguiente">›</button>
+        </div>
+        <div class="c-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTILO SECTION -->
+<section class="estilo-section">
+  <div class="container estilo-grid reveal">
+    <div>
+      <div class="estilo-number">03</div>
+      <div class="estilo-header">
+        <span>Dirección</span>
+        <h2>ESTILO</h2>
+      </div>
+      <p class="estilo-desc">Sistema visual de alto contraste sobre base editorial oscura. Paleta eléctrica inspirada en diseño contemporáneo, pensada para destacar en digital e impreso sin perder elegancia profesional.</p>
+      <div class="swatches">
+        <div class="swatch"><div style="background:#FF3F8E"></div><span>#FF3F8E</span></div>
+        <div class="swatch"><div style="background:#FF7A00"></div><span>#FF7A00</span></div>
+        <div class="swatch"><div style="background:#F9D949"></div><span>#F9D949</span></div>
+        <div class="swatch"><div style="background:#5B2C83"></div><span>#5B2C83</span></div>
+        <div class="swatch"><div style="background:#0E0E0E;border:1px solid #333"></div><span>#0E0E0E</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="typo-card">
+        <span>Tipografía</span>
+        <div class="typo-main">Space Grotesk <em>+</em> Outfit</div>
+        <div class="typo-samples">
+          <div class="sample"><span class="label">Headlines</span><span class="space">Aa Bb Cc 123</span></div>
+          <div class="sample"><span class="label">Cuerpo</span><span class="outfit">Aa Bb Cc 123</span></div>
+          <div class="sample"><span class="label">Uso</span><span class="outfit" style="font-size:14px;color:#aaa">Moderno, legible, versátil</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" style="position:relative;min-height:70vh;display:flex;align-items:center;justify-content:center;padding:0;overflow:hidden;border-top:1px solid #1a1a1a">
+  <!-- VIDEO DE FONDO - Reemplaza src por tu video -->
+  <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;filter:saturate(1.2) contrast(1.1)">
+    <source src="fondo.mp4" type="video/mp4">
+  </video>
+  <!-- Overlay degradado transparente -->
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,14,.85) 0%,rgba(14,14,14,.65) 50%,rgba(14,14,14,.9) 100%), radial-gradient(800px 400px at 50% 50%, rgba(255,63,142,.12), transparent 70%)"></div>
+  
+  <!-- RECTÁNGULO CON CORREO -->
+  <div class="reveal" style="position:relative;z-index:2;text-align:center;padding:48px 56px;background:linear-gradient(135deg, rgba(255,63,142,.18), rgba(255,122,0,.15), rgba(91,44,131,.12));backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.12);border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.08);max-width:520px;margin:0 24px">
+    <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:16px;opacity:.9">mail</div>
+    <a href="marofalberto@gmail.com" style="font-family:'Space Grotesk';font-size:clamp(24px,3.2vw,36px);font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.01em;background:linear-gradient(90deg,#fff, #f0f0f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block;margin-bottom:8px">marofalberto@gmail.com</a>
+    <div style="font-size:14px;color:#b8b8b8;margin-top:12px">Freelance - Disponible para contratación/div>
+  </div>
+</section>
+
+<footer class="bottom">
+  <span>© 2026 <strong>Marof Jaidar</strong> — Publicista</span>
+  <span>Director de Arte</span>
+</footer>
+
+<script>
+const progress = document.querySelector('.progress');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = h.scrollTop / (h.scrollHeight - h.clientHeight);
+  progress.style.width = (pct * 100) + '%';
+});
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} });
+},{threshold:0.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// CARRUSEL HERO para las 6 marcas
+document.querySelectorAll('.carousel').forEach(car=>{
+  const track = car.querySelector('.c-track');
+  const prev = car.querySelector('.c-prev');
+  const next = car.querySelector('.c-next');
+  const dotsWrap = car.parentElement.querySelector('.c-dots');
+  const slides = [...track.children];
+  const project = car.closest('.project');
+  const accent = getComputedStyle(project).getPropertyValue('--accent').trim() || '#FF3F8E';
+  car.closest('.project-work').style.setProperty('--accent', accent);
+  
+  slides.forEach((_,i)=>{
+    const b=document.createElement('button');
+    b.className='c-dot'+(i===0?' active':'');
+    b.onclick=()=>track.scrollTo({left:slides[i].offsetLeft-8,behavior:'smooth'});
+    dotsWrap.appendChild(b);
+  });
+  const dots=[...dotsWrap.children];
+  const upd=()=>{const x=track.scrollLeft+track.clientWidth*0.3;let idx=0;slides.forEach((s,i)=>{if(s.offsetLeft<=x)idx=i});dots.forEach((d,i)=>d.classList.toggle('active',i===idx))};
+  track.addEventListener('scroll',()=>{clearTimeout(track._t);track._t=setTimeout(upd,70)}, {passive:true});
+  prev.onclick=()=>track.scrollBy({left:-track.clientWidth*0.9,behavior:'smooth'});
+  next.onclick=()=>track.scrollBy({left:track.clientWidth*0.9,behavior:'smooth'});
+  let auto=setInterval(()=>{if(!car.matches(':hover'))next.click()},5000);
+  car.addEventListener('mouseenter',()=>clearInterval(auto));
+  car.addEventListener('mouseleave',()=>auto=setInterval(()=>next.click(),5000));
+  upd();
+});
+
+</script>
+</body>
+</html>
