@@ -71,7 +71,7 @@ img{max-width:100%;display:block}
 }
 .hero-meta{
   position:absolute;bottom:32px;left:0;right:0;
-  display:flex;justify-content:space-between;gap:16px;
+  display:flex;justify-content:space-between;gap:18px;
   padding:0 32px;font-size:13px;color:#b8b0b8;letter-spacing:.08em;text-transform:uppercase;
 }
 .hero-meta div:nth-child(2){color:#d8d0d6}
@@ -162,16 +162,27 @@ footer.bottom span strong{color:#9a9a9a;font-weight:500}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:none}
 
+
+/* Ajuste especial CLASH y ALPHA4 - +25% extra */
+.project[style*="--accent:#FF3F8E"] .c-slide,
+.project[style*="--accent:#5B2C83"] .c-slide{
+  flex:0 0 46% !important;
+}
+@media(max-width:1024px){
+  .project[style*="--accent:#FF3F8E"] .c-slide,
+  .project[style*="--accent:#5B2C83"] .c-slide{flex-basis:65% !important}
+}
+
 /* CARRUSEL HERO - inyección */
 .carousel-wrap{margin-top:18px;position:relative}
 .carousel{position:relative;overflow:hidden;border-radius:14px}
-.c-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 2px 8px}
+.c-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 2px 8px}
 .c-track::-webkit-scrollbar{display:none}
-.c-slide{flex:0 0 32%;scroll-snap-align:start;aspect-ratio:4/5;background:#0f0f0f;border:1px solid #1e1e1e;border-radius:14px;overflow:hidden;position:relative;transition:transform .35s,border-color .3s}
+.c-slide{flex:0 0 36.8%;scroll-snap-align:start;aspect-ratio:4/5;background:#0f0f0f;border:1px solid #1e1e1e;border-radius:14px;overflow:hidden;position:relative;transition:transform .35s,border-color .3s}
 .c-slide:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 30px rgba(0,0,0,.45)}
 .c-slide img{width:100%;height:100%;object-fit:cover;display:block}
-@media(max-width:1024px){.c-slide{flex-basis:45%}}
-@media(max-width:640px){.c-slide{flex-basis:78%;aspect-ratio:4/5}}
+@media(max-width:1024px){.c-slide{flex-basis:52%}}
+@media(max-width:640px){.c-slide{flex-basis:85%;aspect-ratio:4/5}}
 .c-prev,.c-next{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(10,10,10,.7);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);color:#fff;font-size:22px;display:grid;place-items:center;cursor:pointer;z-index:3;transition:all .25s;opacity:.9}
 .c-prev{left:12px}.c-next{right:12px}
 .c-prev:hover,.c-next:hover{background:var(--accent);color:#0a0a0a;border-color:var(--accent);transform:translateY(-50%) scale(1.05);opacity:1}
@@ -216,7 +227,7 @@ footer.bottom span strong{color:#9a9a9a;font-weight:500}
       <h2>ACERPRO</h2>
       <p class="project-tag">Industrial / B2B</p>
       <p>Rediseño integral para empresa metalmecánica con 20 años en el sector. Sistema robusto, tipografía condensada y paleta de alto contraste para aplicaciones en planta, digital y señalética.</p>
-      <ul class="project-details"><li>Branding</li><li>Manual</li><li>Señalética</li><li>Presentaciones</li></ul>
+      <ul class="project-details"><li>Brand</li><li>Redes sociales</li><li>Retoque</li>
     </div>
         <div class="project-work reveal">
       <!-- REEMPLAZA: acerpro-principal.jpg (1600x600) --> 
@@ -246,9 +257,9 @@ footer.bottom span strong{color:#9a9a9a;font-weight:500}
     <div class="project-info reveal">
       <span class="project-number">02</span>
       <h2>AGRALIA</h2>
-      <p class="project-tag">Productos / Agroindustria</p>
+      <p class="project-tag">Agroindustria / B2b</p>
       <p>Branding para marca de insumos agrícolas premium. Concepto de crecimiento orgánico, trazabilidad y confianza. Sistema de packaging, etiquetas y comunicación en punto de venta.</p>
-      <ul class="project-details"><li>Packaging</li><li>Brand Strategy</li><li>Retail</li></ul>
+      <ul class="project-details"><li>Brand</li><li>Redes sociales</li><li>Retoque</li></ul>
     </div>
         <div class="project-work reveal">
       <!-- REEMPLAZA: agralia-principal.jpg (1600x600) --> 
@@ -278,9 +289,9 @@ footer.bottom span strong{color:#9a9a9a;font-weight:500}
     <div class="project-info reveal">
       <span class="project-number">03</span>
       <h2>ALPHA4</h2>
-      <p class="project-tag">Servicios / Seguridad</p>
-      <p>Identidad y sistema visual para startup de analítica. Dirección de arte digital con modo oscuro, componentes accesibles y lenguaje escalable para producto y marketing.</p>
-      <ul class="project-details"><li>Brand System</li><li>Product UI</li><li>Design System</li></ul>
+      <p class="project-tag">Seguridad / B2B</p>
+      <p>Lenguaje digital nativo. Grilla de 8pt, modo oscuro real y micro-contrastes que guían el ojo. Diseñé un sistema escalable: del dashboard al post, misma respiración, misma autoridad.</p>
+      <ul class="project-details"><li>Brand</li><li>Redes sociales</li><li>Ia</li></ul>
     </div>
         <div class="project-work reveal">
       <!-- REEMPLAZA: alpha4-principal.jpg (1600x600) --> 
@@ -311,8 +322,8 @@ footer.bottom span strong{color:#9a9a9a;font-weight:500}
       <span class="project-number">04</span>
       <h2>CLASH</h2>
       <p class="project-tag">urban / Style</p>
-      <p>Es una cuestión de actitud. Un estilo definido apuntando sienpre a la cultura del hight.</p>
-      <ul class="project-details"><li>Esports</li><li>Motion</li><li>Merch</li></ul>
+      <p>Cultura sneaker traducida a gráfica. Fondo limpio, producto al 90% del cuadro y color de impacto según silueta. Dirección de arte que hace que un Air Force 1 blanco grite más que un banner.</p>
+      <ul class="project-details"><li>Barnd</li><li>Redes Sociales</li><li>Retoque</li></ul>
     </div>
         <div class="project-work reveal">
       <!-- REEMPLAZA: clash-principal.jpg (1600x600) --> 
@@ -343,8 +354,8 @@ footer.bottom span strong{color:#9a9a9a;font-weight:500}
       <span class="project-number">05</span>
       <h2>CORREA</h2>
       <p class="project-tag">Venta / Automotriz</p>
-      <p>Identidad minimalista, se desempeña en el rubro automotriz, con más de 20 años de experiencia.</p>
-      <ul class="project-details"><li>Personal Brand</li><li>Web</li><li>Social</li></ul>
+      <p>Venta directa sin vueltas. Plantilla modular: foto pro, franja roja de precio y datos que se leen en 2 segundos. Coherencia que genera confianza: misma estructura para Silverado o Blazer, misma fuerza comercial.</p>
+      <ul class="project-details"><li>Brand</li><li>Redes sociales</li><li>Retoque</li></ul>
     </div>
         <div class="project-work reveal">
       <!-- REEMPLAZA: correa-principal.jpg (1600x600) --> 
@@ -375,8 +386,8 @@ footer.bottom span strong{color:#9a9a9a;font-weight:500}
       <span class="project-number">06</span>
       <h2>LA AMERICANA</h2>
       <p class="project-tag">Moda / Retail</p>
-      <p>Tradición desde 1950 con visión y presencia vanguardista; en perfecto equilibro entre la esencia clásica y el estilo urbano.</p>
-      <ul class="project-details"><li>Restaurant</li><li>Packaging</li><li>Editorial</li></ul>
+      <p>Heritage con luz de hoy. Rescaté la paleta cálida de 1950 y la llevé a fotografía lifestyle: piel, textura y producto en primer plano. Coherencia entre tradición y deseo, del local de Curicó al carrusel de Instagram.</p>
+      <ul class="project-details"><li>Brand</li><li>Redes sociales</li><li>Tendencias</li></ul>
     </div>
         <div class="project-work reveal">
       <!-- REEMPLAZA: laamericana-principal.jpg (1600x600) -->
@@ -409,7 +420,7 @@ footer.bottom span strong{color:#9a9a9a;font-weight:500}
         <span>Dirección</span>
         <h2>ESTILO</h2>
       </div>
-      <p class="estilo-desc">Sistema visual de alto contraste sobre base editorial oscura. Paleta eléctrica inspirada en diseño contemporáneo, pensada para destacar en digital e impreso sin perder elegancia profesional.</p>
+      <p class="estilo-desc">visual de alto contraste sobre base editorial oscura. Paleta que se adapta al diseño de cada marca, en este caso uso entre colores pateles con matices electricos que buscan destacar los trabajos de cada marca.</p>
       <div class="swatches">
         <div class="swatch"><div style="background:#FF3F8E"></div><span>#FF3F8E</span></div>
         <div class="swatch"><div style="background:#FF7A00"></div><span>#FF7A00</span></div>
